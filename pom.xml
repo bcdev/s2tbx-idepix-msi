@@ -61,6 +61,11 @@
         </dependency>
         <dependency>
             <groupId>org.esa.snap</groupId>
+            <artifactId>snap-dem</artifactId>
+            <version>${snap.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.esa.snap</groupId>
             <artifactId>snap-runtime</artifactId>
             <version>${snap.version}</version>
         </dependency>
@@ -85,11 +90,11 @@
             <version>${snap.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.esa.s2tbx</groupId>
-            <artifactId>s2tbx-idepix</artifactId>
-            <version>${snap.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.esa.s2tbx</groupId>-->
+            <!--<artifactId>s2tbx-idepix</artifactId>-->
+            <!--<version>${snap.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.jblas</groupId>
@@ -148,10 +153,10 @@
                     <licenseFile>LICENSE.txt</licenseFile>
                     <requiresRestart>true</requiresRestart>
                     <!--<cluster>s3tbx</cluster>-->
-                    <cluster>s3tbx</cluster>
-                    <brandingToken>s3tbx</brandingToken>
+                    <cluster>s2tbx</cluster>
+                    <brandingToken>s2tbx</brandingToken>
                     <requiresRestart>true</requiresRestart>
-                    <keystore>${project.basedir}/keystore/s3tbx.ks</keystore>
+                    <keystore>${project.basedir}/keystore/s2tbx.ks</keystore>
                     <keystorealias>snap</keystorealias>
                     <keystorepassword>snap-123</keystorepassword>
                 </configuration>
