@@ -1,1 +1,9 @@
-org.esa.s3tbx.idepix.olci.IdepixOlciOp$Spi
+org.esa.s2tbx.idepix.msi.IdepixMsiOp$Spi
+org.esa.s2tbx.idepix.msi.IdepixMsiPostProcessOp$Spi
+org.esa.s2tbx.idepix.msi.IdepixMsiClassificationOp$Spi
+org.esa.s2tbx.idepix.msi.operators.S2IdepixCloudBufferOp$Spi
+org.esa.s2tbx.idepix.msi.operators.cloudshadow.S2IdepixPreCloudShadowOp$Spi
+org.esa.s2tbx.idepix.msi.operators.cloudshadow.S2IdepixCloudShadowOp$Spi
+org.esa.s2tbx.idepix.msi.operators.cloudshadow.S2IdepixPostCloudShadowOp$Spi
+org.esa.s2tbx.idepix.msi.operators.mountainshadow.S2IdepixMountainShadowOp$Spi
+org.esa.s2tbx.idepix.msi.operators.mountainshadow.SlopeAspectOrientationOp$Spi

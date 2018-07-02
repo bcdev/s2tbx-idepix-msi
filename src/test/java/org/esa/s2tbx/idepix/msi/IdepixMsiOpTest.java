@@ -16,28 +16,25 @@
 
 package org.esa.s2tbx.idepix.msi;
 
-import org.esa.snap.core.datamodel.Product;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.esa.snap.core.gpf.GPF;
+import org.esa.snap.core.gpf.OperatorSpi;
+import org.esa.snap.core.gpf.OperatorSpiRegistry;
+import org.junit.Test;
 
-public class Sentinel2ClassificationOpTest {
+import static org.junit.Assert.*;
 
-    @BeforeClass
-    public static void beforeClass() throws Exception {
+public class IdepixMsiOpTest {
+
+    @Test
+    public void testOperatorSpiIsLoaded() {
+        OperatorSpiRegistry registry = GPF.getDefaultInstance().getOperatorSpiRegistry();
+        OperatorSpi operatorSpi = registry.getOperatorSpi("Idepix.Sentinel2.Plugin.Msi");
+        assertNotNull(operatorSpi);
+        assertEquals("Idepix.Sentinel2.Plugin.Msi", operatorSpi.getOperatorAlias());
+        assertNotNull(operatorSpi.getOperatorDescriptor());
+        assertSame(operatorSpi.getOperatorClass(), operatorSpi.getOperatorDescriptor().getOperatorClass());
     }
 
-    @Before
-    public void setUp() throws Exception {
-
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
-    private Product createTestProduct(int w, int h) {
-        return new Product("F", "F", w, h);
-    }
+    // todo: continue
 
 }

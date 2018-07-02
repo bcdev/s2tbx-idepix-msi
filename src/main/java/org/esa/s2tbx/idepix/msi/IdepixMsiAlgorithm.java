@@ -1,7 +1,7 @@
-package org.esa.s2tbx.s2msi.idepix.algorithms.sentinel2;
+package org.esa.s2tbx.idepix.msi;
 
-import org.esa.s2tbx.s2msi.idepix.util.S2IdepixConstants;
-import org.esa.s2tbx.s2msi.idepix.util.S2IdepixUtils;
+import org.esa.s2tbx.idepix.msi.util.S2IdepixConstants;
+import org.esa.s2tbx.idepix.msi.util.S2IdepixUtils;
 import org.esa.snap.core.util.math.MathUtils;
 
 /**
