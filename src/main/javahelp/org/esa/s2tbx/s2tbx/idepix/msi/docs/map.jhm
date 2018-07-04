@@ -5,9 +5,9 @@
 
 <map version="2.0">
 
-    <mapID target="idepixPluginMsiTool" url="Msi/IdepixMsiTool.html"/>
-    <mapID target="idepixPluginMsiAlgorithmSpecification" url="Msi/IdepixMsiAlgorithmSpecification.html"/>
-    <mapID target="idepixPluginMsiProcessorDescription" url="Msi/IdepixMsiProcessorDescription.html"/>
-    <mapID target="idepixPluginMsiCommandLine" url="Msi/IdepixMsiCommandLine.html"/>
+    <mapID target="idepixPluginMsiTool" url="msi/IdepixMsiTool.html"/>
+    <mapID target="idepixPluginMsiAlgorithmSpecification" url="msi/IdepixMsiAlgorithmSpecification.html"/>
+    <mapID target="idepixPluginMsiProcessorDescription" url="msi/IdepixMsiProcessorDescription.html"/>
+    <mapID target="idepixPluginMsiCommandLine" url="msi/IdepixMsiCommandLine.html"/>
 
 </map>

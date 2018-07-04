@@ -26,10 +26,10 @@ import java.util.Map;
  */
 @OperatorMetadata(alias = "Idepix.Sentinel2.Plugin.Msi",
         category = "Optical/Pre-Processing",
-        version = "2.2",
-        authors = "Olaf Danne",
-        copyright = "(c) 2016 by Brockmann Consult",
-        description = "Pixel identification and classification for Sentinel-2.")
+        version = "0.8",
+        authors = "Tonio Fincke, Olaf Danne",
+        copyright = "(c) 2016-2018 by Brockmann Consult",
+        description = "Pixel identification and classification for Sentinel-2 MSI instrument.")
 public class IdepixMsiOp extends Operator {
 
     private static final int LAND_WATER_MASK_RESOLUTION = 50;
@@ -102,20 +102,23 @@ public class IdepixMsiOp extends Operator {
             description = " The width of the 'safety buffer' around a pixel identified as cloudy.")
     private int cloudBufferWidth;
 
-    @Parameter(defaultValue = "0.01",
-            label = " Threshold CW_THRESH",
-            description = " Threshold CW_THRESH")
-    private double cwThresh;
+//    @Parameter(defaultValue = "0.01",
+//            label = " Threshold CW_THRESH",
+//            description = " Threshold CW_THRESH")
+//    private double cwThresh;
+    private double cwThresh = 0.01;
 
-    @Parameter(defaultValue = "-0.11",
-            label = " Threshold GCL_THRESH",
-            description = " Threshold GCL_THRESH")
-    private double gclThresh;
+//    @Parameter(defaultValue = "-0.11",
+//            label = " Threshold GCL_THRESH",
+//            description = " Threshold GCL_THRESH")
+//    private double gclThresh;
+    private double gclThresh = -0.11;
 
-    @Parameter(defaultValue = "0.01",
-            label = " Threshold CL_THRESH",
-            description = " Threshold CL_THRESH")
-    private double clThresh;
+//    @Parameter(defaultValue = "0.01",
+//            label = " Threshold CL_THRESH",
+//            description = " Threshold CL_THRESH")
+//    private double clThresh;
+    private double clThresh = 0.01;
 
     @Parameter(description = "The digital elevation model.", defaultValue = "SRTM 3Sec", label = "Digital Elevation Model")
     private String demName = "SRTM 3Sec";
