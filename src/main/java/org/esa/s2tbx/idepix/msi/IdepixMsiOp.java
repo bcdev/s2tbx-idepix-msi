@@ -165,6 +165,9 @@ public class IdepixMsiOp extends Operator {
             computePostProcessProduct();
 
             targetProduct = S2IdepixUtils.cloneProduct(s2ClassifProduct, true);
+            if (!copyToaReflectances) {
+                S2IdepixUtils.removeReflectancesForCloudShadow(targetProduct);
+            }
 
             Band cloudFlagBand = targetProduct.getBand(S2IdepixUtils.IDEPIX_CLASSIF_FLAGS);
             cloudFlagBand.setSourceImage(postProcessingProduct.getBand(S2IdepixUtils.IDEPIX_CLASSIF_FLAGS).getSourceImage());
@@ -227,6 +230,7 @@ public class IdepixMsiOp extends Operator {
     private Map<String, Object> createPixelClassificationParameters() {
         Map<String, Object> gaCloudClassificationParameters = new HashMap<>(1);
         gaCloudClassificationParameters.put("copyToaReflectances", copyToaReflectances);
+        gaCloudClassificationParameters.put("computeCloudShadow", computeCloudShadow);
         gaCloudClassificationParameters.put("copyFeatureValues", copyFeatureValues);
         gaCloudClassificationParameters.put("applyNNPure", applyNNPure);
         gaCloudClassificationParameters.put("ignoreNN", ignoreNN);
